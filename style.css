@@ -449,7 +449,36 @@ img.social-icon {
   border-radius: 2rem;
   border: 0.06rem solid var(--border);
   text-align: center;
+  position: relative;
 }
+
+.link-icon-container {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.details-container:hover .link-icon-container {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.link-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  filter: invert(33%) sepia(98%) saturate(3044%) hue-rotate(200deg) brightness(97%) contrast(108%);
+  transition: transform 250ms ease, filter 250ms ease;
+}
+
+.link-icon:hover {
+  transform: scale(1.1);
+  filter: invert(33%) sepia(98%) saturate(4044%) hue-rotate(200deg) brightness(97%) contrast(108%);
+}
+
 
 .text-container {
   margin-top: 2rem;
