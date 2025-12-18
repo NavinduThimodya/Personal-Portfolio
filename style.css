@@ -420,12 +420,13 @@ img.social-icon {
   position: relative;
   height: auto;
   margin-bottom: 8rem; /* Increased distance to Experience section */
-  scroll-margin-top: 8rem; /* Independent scroll offset */
+  scroll-margin-top: 5rem; /* Independent scroll offset */
 }
 
 .about-containers {
-  gap: 2rem;
+  gap: 4rem;
   margin: 1rem 0;
+  justify-content: center; /* Center the two boxes */
 }
 
 .about-details-container {
@@ -451,6 +452,7 @@ img.social-icon {
 .details-container {
   padding: 1.5rem;
   flex: 1;
+  max-width: 25rem; /* Add max-width to reduce box width */
   background: var(--surface);
   border-radius: 2rem;
   border: 0.06rem solid var(--border);
@@ -503,20 +505,20 @@ img.social-icon {
 
 /* EXPERIENCE SECTION */
 
-#experience {
+#skills {
   position: relative;
-  scroll-margin-top: 8rem; /* Independent scroll offset */
+  scroll-margin-top: 5.5rem; /* Independent scroll offset */
   margin-bottom: 5rem; /* Independent section spacing */
 }
 
-.experience-sub-title {
+.skills-sub-title {
   color: var(--muted);
   font-weight: 800;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.skills-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -529,14 +531,20 @@ img.social-icon {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: flex-start; /* Align articles to the start */
+  align-items: flex-start; /* Align items to the start of the cross axis */
 }
 
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+article div {
+  flex: 1; /* Allow the div to take up remaining space */
+  text-align: left; /* Ensure text is left-aligned */
 }
 
 article .icon {
@@ -547,7 +555,7 @@ article .icon {
 
 #projects {
   position: relative;
-  scroll-margin-top: 8rem; /* Independent scroll offset */
+  scroll-margin-top: 6rem; /* Independent scroll offset */
   margin-bottom: 5rem; /* Independent section spacing */
 }
 
