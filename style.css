@@ -253,6 +253,10 @@ section {
   color: #ffffff; /* John Doe: force white everywhere */
 }
 
+.text-accent {
+  color: var(--accent);
+}
+
 #socials-container {
   display: flex;
   justify-content: center;
