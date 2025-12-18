@@ -39,7 +39,7 @@ def make_square(image_path: Path):
         sys.exit(1)
 
 if __name__ == "__main__":
-    image_path = Path("assets/phone-circle.png")
+    image_path = Path("assets/profile-pic.png")
 
     if not image_path.is_file():
         print(f"Error: Image file not found at {image_path}")
