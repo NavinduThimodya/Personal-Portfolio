@@ -201,7 +201,7 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 8rem;
 }
 
 .section-container {
@@ -251,6 +251,7 @@ section {
   text-align: center;
   font-weight: 800;
   color: #ffffff; /* John Doe: force white everywhere */
+  margin-bottom: 0rem;
 }
 
 .text-accent {
@@ -412,12 +413,13 @@ img.social-icon {
 
 #about {
   position: relative;
+  height: auto;
+  margin-bottom: 3rem;
 }
 
 .about-containers {
   gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 0;
+  margin: 1rem 0;
 }
 
 .about-details-container {
@@ -437,7 +439,7 @@ img.social-icon {
 .arrow {
   position: absolute;
   right: -5rem;
-  bottom: 2.5rem;
+  bottom: 1rem;
 }
 
 .details-container {
@@ -447,6 +449,10 @@ img.social-icon {
   border-radius: 2rem;
   border: 0.06rem solid var(--border);
   text-align: center;
+}
+
+.text-container {
+  margin-top: 2rem;
 }
 
 .section-container {
