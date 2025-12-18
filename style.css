@@ -1,6 +1,17 @@
 /* GENERAL */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #1E1E26; /* deep charcoal base */
+  --surface: #26262d; /* slightly lighter surface */
+  --text: #E6E7EA; /* primary text */
+  --muted: #A6A7AD; /* secondary text */
+  --border: rgba(255,255,255,0.06);
+  --accent: #FFD166; /* Cyber Yellow / gold accent */
+  --accent-contrast: #1E1E26; /* text color on accent */
+  --glass: rgba(255,255,255,0.03);
+}
 
 * {
   margin: 0;
@@ -8,7 +19,9 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 html {
@@ -16,7 +29,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--muted);
 }
 
 /* TRANSITION */
@@ -47,20 +60,21 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--text);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: transparent;
 }
 
 a:hover {
-  color: grey;
+  color: var(--accent);
   text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-underline-offset: 0.4rem;
+  text-decoration-color: rgba(255,255,255,0.06);
 }
 
 .logo {
   font-size: 2rem;
+  color: var(--text);
 }
 
 .logo:hover {
@@ -90,7 +104,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--muted);
   transition: all 0.3 ease-in-out;
 }
 
@@ -98,11 +112,11 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--surface);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  color: #ffffff; /* John Doe: force white in nav */
 }
 
 .menu-links a {
@@ -110,7 +124,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--text);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -196,11 +210,15 @@ section {
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  font-weight: 800;
+  color: var(--muted); /* Frontend Developer: keep the previous muted shade */
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
+  font-weight: 800;
+  color: #ffffff; /* John Doe: force white everywhere */
 }
 
 #socials-container {
@@ -215,6 +233,58 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+}
+
+/* Make SVG and font icons visible on dark backgrounds */
+.icon svg,
+.icon i,
+.icon::before,
+.contact-icon svg,
+.social-icon svg {
+  fill: var(--text) !important;
+  stroke: var(--text) !important;
+  color: var(--text) !important;
+}
+
+/* Images used as icons: invert dark -> light for contrast */
+.icon img,
+.contact-icon img,
+.email-icon img,
+.social-icon img {
+  display: block;
+  height: 1.6rem;
+  width: auto;
+  /* Force dark->light conversion for black icons: */
+  filter: brightness(0) invert(1) contrast(1.2) !important;
+  -webkit-filter: brightness(0) invert(1) contrast(1.2) !important;
+}
+
+/* Fallback: if an icon is a single-color raster, use it as a mask so we can color it cleanly */
+.icon--mask, .maskable {
+  background-color: var(--text);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+/* Soft circular background for social/contact icons */
+.contact-icon,
+.social-icon {
+  background: var(--glass);
+  padding: 0.45rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.04rem solid var(--border);
 }
 
 /* BUTTONS */
@@ -233,32 +303,28 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+.btn-color-1 {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: none;
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  filter: brightness(0.95);
+  cursor: pointer;
 }
 
 .btn-color-2 {
-  background: none;
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  border: 0.08rem solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(4px);
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  cursor: pointer;
 }
 
 .btn-container {
@@ -300,10 +366,9 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--surface);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.06rem solid var(--border);
   text-align: center;
 }
 
@@ -325,8 +390,8 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
+  color: var(--muted);
+  font-weight: 800;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
@@ -364,8 +429,20 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: var(--border);
+  background: var(--surface);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.color-container:hover,
+.color-container:focus {
+  transform: translateY(-8px);
+  box-shadow:
+    0 26px 56px rgba(0,0,0,0.20),
+    0 6px 28px rgba(0,0,0,0.10),
+    0 0 44px rgba(255,255,255,0.36);
+  transition: transform 300ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms ease;
 }
 
 .project-img {
@@ -376,12 +453,22 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--text);
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.project-btn {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.06);
+}
+
+.project-btn:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.16);
 }
 
 /* CONTACT */
@@ -397,9 +484,8 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: 0.06rem solid var(--border);
+  background: var(--surface);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -442,7 +528,7 @@ footer p {
   left: 0;
   height: 4px;
   width: 0%;
-  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  background: linear-gradient(90deg, var(--accent), #ffd6a5);
   z-index: 9999;
   transition: width 120ms linear;
 }
@@ -461,11 +547,17 @@ footer p {
 .details-container {
   transition: transform 250ms ease, box-shadow 250ms ease;
   will-change: transform;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-.details-container:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+.details-container:hover,
+.details-container:focus-within {
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.22),
+    0 6px 30px rgba(0,0,0,0.12),
+    0 0 48px rgba(255,255,255,0.40);
+  transition: transform 300ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms ease;
 }
 
 /* project img parallax smoothing */
