@@ -51,6 +51,14 @@ nav {
   align-items: center;
   height: 7vh;
   padding: 0.35rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(30, 30, 38, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav-links {
@@ -71,6 +79,23 @@ a:hover {
   text-underline-offset: 0.4rem;
   text-decoration-color: rgba(255,255,255,0.06);
 }
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+  color: var(--accent);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  outline: none;
+}
+
 
 .logo {
   font-size: 2rem;
@@ -182,9 +207,8 @@ section {
   justify-content: center;
   align-items: center; /* center children vertically */
   gap: 5rem;
-  min-height: calc(100vh - 7vh); /* leave room for the header */
-  padding-top: 1.5vh;
-  transform: translateY(-12vh); /* lift intro higher */
+  min-height: 100vh;
+  padding-top: 7vh;
 }
 
 .section__pic-container {
@@ -264,6 +288,13 @@ section {
   -webkit-filter: brightness(0) invert(1) contrast(1.2) !important;
 }
 
+/* Opt-out for icons that should be shown exactly as provided (no filter) */
+img.no-filter,
+.no-filter {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
 /* Fallback: if an icon is a single-color raster, use it as a mask so we can color it cleanly */
 .icon--mask, .maskable {
   background-color: var(--text);
@@ -285,6 +316,40 @@ section {
   align-items: center;
   justify-content: center;
   border: 0.04rem solid var(--border);
+  /* Force a square box so the circular background is perfect */
+  width: 2.6rem;
+  height: 2.6rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* If the icon element is an <img> itself (some icons use the class directly on the img),
+   make it behave like a square icon container and ensure its contents fit */
+img.contact-icon,
+img.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.45rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--glass);
+  border: 0.04rem solid var(--border);
+}
+
+/* Ensure raster icons inside the circular containers scale correctly */
+.contact-icon img,
+.social-icon img,
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 /* BUTTONS */
