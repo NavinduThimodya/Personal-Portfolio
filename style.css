@@ -36,7 +36,8 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 7vh;
+  padding: 0.35rem 0;
 }
 
 .nav-links {
@@ -165,15 +166,18 @@ section {
 #profile {
   display: flex;
   justify-content: center;
+  align-items: center; /* center children vertically */
   gap: 5rem;
-  height: 80vh;
+  min-height: calc(100vh - 7vh); /* leave room for the header */
+  padding-top: 1.5vh;
+  transform: translateY(-12vh); /* lift intro higher */
 }
 
 .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
-  margin: auto 0;
+  margin: 0; /* parent controls centering */
 }
 
 .section__text {
