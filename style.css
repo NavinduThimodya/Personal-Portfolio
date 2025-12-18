@@ -254,6 +254,10 @@ section {
   margin-bottom: 0rem;
 }
 
+#about .title {
+  margin-bottom: 3rem;
+}
+
 .text-accent {
   color: var(--accent);
 }
