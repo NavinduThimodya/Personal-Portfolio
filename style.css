@@ -430,3 +430,57 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* ENHANCEMENTS: animations, progress bar, micro-interactions, parallax */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  z-index: 9999;
+  transition: width 120ms linear;
+}
+
+/* subtle hover micro-interactions */
+.btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.btn:focus {
+  outline: 3px solid rgba(99,102,241,0.25);
+  outline-offset: 2px;
+}
+
+.details-container {
+  transition: transform 250ms ease, box-shadow 250ms ease;
+  will-change: transform;
+}
+
+.details-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+/* project img parallax smoothing */
+.project-img, .section__pic-container img {
+  transition: transform 300ms ease-out;
+  will-change: transform;
+}
+
+/* accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* small responsive tweaks */
+@media (max-width: 768px) {
+  #scroll-progress {
+    height: 3px;
+  }
+} 

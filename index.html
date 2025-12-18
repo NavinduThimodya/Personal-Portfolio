@@ -7,8 +7,10 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <nav id="desktop-nav">
       <div class="logo">John Doe</div>
       <div>
@@ -36,11 +38,11 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+    <section id="profile" data-aos="fade-up" data-aos-once="true">
+      <div class="section__pic-container" data-aos="fade-right" data-aos-once="true">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" data-speed="0.12" />
       </div>
-      <div class="section__text">
+      <div class="section__text" data-aos="fade-left" data-aos-once="true">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">John Doe</h1>
         <p class="section__text__p2">Frontend Developer</p>
@@ -71,20 +73,21 @@
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+    <section id="about" data-aos="fade-up" data-aos-once="true">
+      <p class="section__text__p1" data-aos="fade-right" data-aos-once="true">Get To Know More</p>
+      <h1 class="title" data-aos="fade-left" data-aos-once="true">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
+        <div class="section__pic-container" data-aos="fade-right" data-aos-once="true">
           <img
             src="./assets/about-pic.png"
             alt="Profile picture"
             class="about-pic"
+            data-speed="0.08"
           />
         </div>
-        <div class="about-details-container">
+        <div class="about-details-container" data-aos="fade-left" data-aos-once="true">
           <div class="about-containers">
-            <div class="details-container">
+            <div class="details-container" data-aos="fade-up" data-aos-once="true">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
@@ -93,7 +96,7 @@
               <h3>Experience</h3>
               <p>2+ years <br />Frontend Development</p>
             </div>
-            <div class="details-container">
+            <div class="details-container" data-aos="fade-up" data-aos-once="true">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
@@ -122,12 +125,12 @@
         onclick="location.href='./#experience'"
       />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+    <section id="experience" data-aos="fade-up" data-aos-once="true">
+      <p class="section__text__p1" data-aos="fade-right" data-aos-once="true">Explore My</p>
+      <h1 class="title" data-aos="fade-left" data-aos-once="true">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container">
+          <div class="details-container" data-aos="fade-up" data-aos-once="true">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
@@ -198,7 +201,7 @@
               </article>
             </div>
           </div>
-          <div class="details-container">
+          <div class="details-container" data-aos="fade-up" data-aos-once="true">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
@@ -261,12 +264,15 @@
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-aos="zoom-in" data-aos-once="true" data-aos-delay="120">
             <div class="article-container">
               <img
                 src="./assets/project-1.png"
                 alt="Project 1"
                 class="project-img"
+                data-aos="zoom-in"
+                data-aos-delay="120"
+                data-speed="0.02"
               />
             </div>
             <h2 class="experience-sub-title project-title">Project One</h2>
@@ -285,12 +291,15 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-aos="zoom-in" data-aos-once="true" data-aos-delay="160">
             <div class="article-container">
               <img
                 src="./assets/project-2.png"
                 alt="Project 2"
                 class="project-img"
+                data-aos="zoom-in"
+                data-aos-delay="160"
+                data-speed="0.02"
               />
             </div>
             <h2 class="experience-sub-title project-title">Project Two</h2>
@@ -309,12 +318,15 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200">
             <div class="article-container">
               <img
                 src="./assets/project-3.png"
                 alt="Project 3"
                 class="project-img"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+                data-speed="0.02"
               />
             </div>
             <h2 class="experience-sub-title project-title">Project Three</h2>
@@ -342,9 +354,9 @@
         onclick="location.href='./#contact'"
       />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+    <section id="contact" data-aos="fade-up" data-aos-once="true">
+      <p class="section__text__p1" data-aos="fade-right" data-aos-once="true">Get in Touch</p>
+      <h1 class="title" data-aos="fade-left" data-aos-once="true">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
@@ -377,6 +389,7 @@
       </nav>
       <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
