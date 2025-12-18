@@ -217,6 +217,7 @@ section {
   min-height: 100vh;
   padding-top: 7vh;
   scroll-margin-top: 8rem; /* Independent scroll offset */
+  margin-bottom: 5rem; /* Independent section spacing */
 }
 
 .section__pic-container {
@@ -418,8 +419,8 @@ img.social-icon {
 #about {
   position: relative;
   height: auto;
-  margin-bottom: 3rem;
-  scroll-margin-top: 4.5rem; /* Independent scroll offset */
+  margin-bottom: 8rem; /* Increased distance to Experience section */
+  scroll-margin-top: 8rem; /* Independent scroll offset */
 }
 
 .about-containers {
@@ -504,7 +505,8 @@ img.social-icon {
 
 #experience {
   position: relative;
-  scroll-margin-top: 9rem; /* Independent scroll offset */
+  scroll-margin-top: 8rem; /* Independent scroll offset */
+  margin-bottom: 5rem; /* Independent section spacing */
 }
 
 .experience-sub-title {
@@ -545,7 +547,8 @@ article .icon {
 
 #projects {
   position: relative;
-  scroll-margin-top: 5rem; /* Independent scroll offset */
+  scroll-margin-top: 8rem; /* Independent scroll offset */
+  margin-bottom: 5rem; /* Independent section spacing */
 }
 
 .color-container {
