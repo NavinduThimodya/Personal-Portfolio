@@ -132,3 +132,15 @@ function setupScrollspy() {
     });
 }
 
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const element = document.querySelector(window.location.hash);
+    if (element) {
+      // The timeout gives the browser a moment to finish layout
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100); 
+    }
+  }
+});
+
