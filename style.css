@@ -712,3 +712,45 @@ footer p {
     height: 3px;
   }
 } 
+
+/* --- CUSTOM BOX WIDTHS --- */
+
+/* 1. Experience Box (Currently on its own row) */
+.box-work {
+  flex: none;         /* Stop it from stretching automatically */
+  width: 30rem;       /* Set your desired width here */
+  max-width: 90vw;    /* Ensure it doesn't overflow on small screens */
+}
+
+/* 2. University Box */
+.box-uni {
+  flex: none;
+  width: 12rem;       /* Change this value */
+  max-width: 100%;
+}
+
+/* 3. A/L Box */
+.box-al {
+  flex: none;
+  width: 10rem;       /* Change this value */
+  max-width: 100%;
+}
+
+/* 4. Diploma Box */
+.box-diploma {
+  flex: none;
+  width: 10rem;       /* Change this value */
+  max-width: 100%;
+}
+
+
+.about-containers-edu-gap {
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center; /* Center the two boxes */
+}
+
+.about-containers-edu-gap,
+.about-details-container {
+  display: flex;
+}
