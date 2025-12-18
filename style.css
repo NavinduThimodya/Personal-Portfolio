@@ -201,7 +201,6 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
-  scroll-margin-top: 8rem;
 }
 
 .section-container {
@@ -217,6 +216,7 @@ section {
   gap: 5rem;
   min-height: 100vh;
   padding-top: 7vh;
+  scroll-margin-top: 8rem; /* Independent scroll offset */
 }
 
 .section__pic-container {
@@ -419,6 +419,7 @@ img.social-icon {
   position: relative;
   height: auto;
   margin-bottom: 3rem;
+  scroll-margin-top: 4.5rem; /* Independent scroll offset */
 }
 
 .about-containers {
@@ -503,6 +504,7 @@ img.social-icon {
 
 #experience {
   position: relative;
+  scroll-margin-top: 9rem; /* Independent scroll offset */
 }
 
 .experience-sub-title {
@@ -543,6 +545,7 @@ article .icon {
 
 #projects {
   position: relative;
+  scroll-margin-top: 5rem; /* Independent scroll offset */
 }
 
 .color-container {
@@ -595,6 +598,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  scroll-margin-top: 8rem; /* Independent scroll offset */
 }
 
 .contact-info-upper-container {
