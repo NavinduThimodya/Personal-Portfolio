@@ -1069,8 +1069,8 @@ footer p {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px; /* Fixed width for crop */
-  height: 400px; /* Fixed height for crop */
+  width: 240px; /* Fixed width for crop */
+  height: 320px; /* Fixed height for crop */
   border-radius: 1.5rem;
   /* Logic: Default state is "Upcoming/Retiring" (Blurred & Smaller) */
   filter: blur(5px);
