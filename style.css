@@ -758,6 +758,12 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 
 footer p {
