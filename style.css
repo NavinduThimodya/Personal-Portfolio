@@ -512,17 +512,94 @@ img.social-icon {
 }
 
 .skills-sub-title {
-  color: var(--muted);
+  color: var(--accent);
   font-weight: 800;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
 .skills-details-container {
+  /* display: flex;
+  flex-direction: column; */
+  /* Increase this value to add more space below the title */
+  margin-top: 2rem; 
+}
+
+/* Container for the Grid */
+.skills-details-container .about-containers {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto auto; 
+  gap: 1rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* First Box: Infrastructure & DevOps */
+.skills-details-container .about-containers .details-container:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  
+  /* Pushes the box to the right-most edge of Column 1 */
+  justify-self: end; 
+  
+  /* Adjust width if you want to see the "push" effect more clearly */
+  width: 90%; 
+}
+
+/* Second Box: Programming & Web */
+.skills-details-container .about-containers .details-container:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  width: 80%;
+  justify-self: center; /* Centers the 80% box in column 2 */
+}
+
+/* Third Box: Databases & Tools */
+.skills-details-container .about-containers .details-container:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+  width: 80%;
+  justify-self: center; /* Centers the 80% box in column 2 */
+}
+
+/* Fourth Box: Design & Specialized Tools */
+.skills-details-container .about-containers .details-container:nth-child(4) {
+  grid-column: 1 / span 2; /* Keeps it spanning across both columns */
+  grid-row: 3;
+  width: 95%;             /* INCREASE THIS: e.g., 90%, 95%, or 100% */
+  justify-self: center;   /* Keeps it centered as it gets wider */
+  max-width: none; 
+  box-sizing: border-box;
+}
+
+/* Ensure internal content is also centered inside the boxes */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.article-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Responsive adjustment for mobile */
+@media screen and (max-width: 900px) {
+  .skills-details-container .about-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the narrower boxes in the column on mobile */
+    gap: 1.5rem;
+  }
+  
+  /* Reset widths for mobile so they look good on small screens */
+  .skills-details-container .about-containers .details-container {
+      width: 90% !important;
+  }
 }
 
 .article-container {
