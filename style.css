@@ -1072,6 +1072,17 @@ footer p {
   width: 300px; /* Fixed width for crop */
   height: 400px; /* Fixed height for crop */
   border-radius: 1.5rem;
+  /* Logic: Default state is "Upcoming/Retiring" (Blurred & Smaller) */
+  filter: blur(5px);
+  opacity: 0.6;
+  transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.swiper-slide-active {
+  /* Logic: Center "Hero" state (Clear & Focused) */
+  filter: blur(0);
+  opacity: 1;
+  z-index: 10;
 }
 
 .swiper-slide img {
