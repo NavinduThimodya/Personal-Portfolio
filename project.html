@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-button">Back to Home</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Back Button -->
+    <div class="back-nav-mobile">
+        <a href="index.html" class="btn btn-color-2">Back</a>
+    </div>
+
+    <section id="project-details">
+      <h1 class="title" id="project-title">Project Title</h1>
+      <div class="project-info-container">
+        <div class="project-image-wrapper">
+          <img
+            src="./assets/project-1.png"
+            alt="Project Image"
+            class="project-detail-img"
+            id="project-img"
+          />
+        </div>
+        <div class="project-text-wrapper">
+          <h3 class="skills-sub-title">Overview</h3>
+          <p class="project-description">
+            This is a detailed view of the project. Here you can describe the problem you solved, the technologies used, and the impact of the solution.
+            <br /><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('https://github.com/', '_blank')"
+            >
+              GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // Dynamic Content Loading
+      const params = new URLSearchParams(window.location.search);
+      const title = params.get('title');
+      
+      if (title) {
+        document.getElementById('project-title').innerText = title;
+        document.title = title + " | Navindu Sirimanna";
+        
+        // Optional: Map titles to specific images if needed
+        // const imgMap = { "Project One": "./assets/project-1.png", ... };
+      }
+    </script>
+  </body>
+</html>
