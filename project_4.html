@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infrastructure Maintenance | Navindu Sirimanna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav" style="justify-content: flex-start; padding-left: 5%;">
+      <ul class="nav-links">
+        <li><a href="index.html#projects" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem;"><span style="font-size: 2.5rem; line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Home</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Back Button -->
+    <div class="back-nav-mobile">
+        <a href="index.html#projects" class="btn btn-color-2">Back</a>
+    </div>
+
+    <section id="project-details">
+      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">Infrastructure Maintenance and<br>NetBackup Client Upgrade</h1>
+      
+      <div class="project-info-container project-1-layout">
+        
+        <!-- Top Section: Image & Metadata -->
+        <div class="project-top-section">
+          <div class="project-image-wrapper">
+            <!-- Swiper -->
+            <div class="swiper projectSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./projects/Project_4/1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_4/2.png" alt="Project Image 2" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_4/3.png" alt="Project Image 3" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_4/1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_4/2.png" alt="Project Image 2" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_4/3.png" alt="Project Image 3" /></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="project-meta-box">
+            <h3 class="skills-sub-title" style="color: var(--text);">Project Details</h3>
+            <div class="meta-item">
+              <span class="meta-label">Client:</span>
+              <span class="meta-value">Hatton National Bank (HNB)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Location:</span>
+              <span class="meta-value">HNB Head Office / Data Center and DR Site</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Period:</span>
+              <span class="meta-value">January 2025 – April 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Full Width Content -->
+        <div class="project-full-content">
+          
+          <div class="content-block">
+            <h3 class="skills-sub-title">1. Project Overview</h3>
+            <p class="project-description">
+              This engagement involved a series of critical infrastructure maintenance tasks and upgrades to ensure the high availability and reliability of HNB’s banking systems. The scope ranged from facilitating a major hardware migration (Hitachi to Dell servers) to executing software upgrades for data protection (NetBackup) and database performance (Exadata). It also included routine but essential hardware maintenance, such as storage battery replacements, to safeguard data integrity.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">2. Technical Scope</h3>
+            <p class="project-description">
+              <strong>Data Protection:</strong> Upgrading Veritas NetBackup client software across production and DR environments.
+              <br>
+              <strong>Server Infrastructure:</strong> Facilitating the migration of virtualized workloads from legacy Hitachi servers to new Dell servers.
+              <br>
+              <strong>Engineered Systems:</strong> Patch management for Oracle Exadata systems to maintain security and performance.
+              <br>
+              <strong>Storage Maintenance:</strong> Hardware servicing of Hitachi Storage systems to prevent data loss during power events.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">3. My Contributions</h3>
+            <div class="phases-grid">
+              <div class="phase-card">
+                <h4>Phase 1: Server Migration Support</h4>
+                <ul>
+                  <li><strong>Data Collection & Planning:</strong> Gathered critical system data to facilitate the replacement of an old Hitachi server with a new Dell server.</li>
+                  <li><strong>Configuration Analysis:</strong> Compiled details on VMs, LUNs, and system configurations for the migration team to ensure a seamless transition.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Phase 2: Oracle Exadata Patching</h4>
+                <ul>
+                  <li><strong>Patch Upgrade:</strong> Executed an Exadata patch upgrade at the HNB site.</li>
+                  <li><strong>Coordination:</strong> Coordinated between Oracle support and HNB to ensure successful execution without disrupting banking operations.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Phase 3: Storage System Maintenance</h4>
+                <ul>
+                  <li><strong>Battery Replacement:</strong> Replaced batteries in Hitachi storage systems at the HNB Tower Data Center.</li>
+                  <li><strong>Data Integrity Assurance:</strong> Verified battery functionality to ensure cache memory backup power during power failures.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Phase 4: NetBackup Client Upgrade</h4>
+                <ul>
+                  <li><strong>Execution:</strong> Performed NetBackup client upgrade starting with the DR site, ensuring correct configuration.</li>
+                  <li><strong>Validation:</strong> Conducted post-upgrade tests on backup and restore functionalities.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">4. Technologies & Tools Used</h3>
+            <div class="tech-stack-container">
+              <span class="tech-badge">Veritas NetBackup</span>
+              <span class="tech-badge">Oracle Exadata</span>
+              <span class="tech-badge">Hitachi Storage</span>
+              <span class="tech-badge">Dell Servers</span>
+              <span class="tech-badge">Virtualization</span>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 3rem;">Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".projectSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

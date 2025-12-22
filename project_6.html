@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Appliance Upgrade | Navindu Sirimanna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav" style="justify-content: flex-start; padding-left: 5%;">
+      <ul class="nav-links">
+        <li><a href="index.html#projects" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem;"><span style="font-size: 2.5rem; line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Home</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Back Button -->
+    <div class="back-nav-mobile">
+        <a href="index.html#projects" class="btn btn-color-2">Back</a>
+    </div>
+
+    <section id="project-details">
+      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">Flex Appliance Upgrade and<br>Troubleshooting</h1>
+      
+      <div class="project-info-container project-1-layout">
+        
+        <!-- Top Section: Image & Metadata -->
+        <div class="project-top-section">
+          <div class="project-image-wrapper">
+            <!-- Swiper -->
+            <div class="swiper projectSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./projects/Project_6/1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_6/2.png" alt="Project Image 2" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_6/3.png" alt="Project Image 3" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_6/1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_6/2.png" alt="Project Image 2" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_6/3.png" alt="Project Image 3" /></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="project-meta-box">
+            <h3 class="skills-sub-title" style="color: var(--text);">Project Details</h3>
+            <div class="meta-item">
+              <span class="meta-label">Client:</span>
+              <span class="meta-value">INSEE Cement</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Location:</span>
+              <span class="meta-value">INSEE Data Center</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Period:</span>
+              <span class="meta-value">January 2025 – March 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Full Width Content -->
+        <div class="project-full-content">
+          
+          <div class="content-block">
+            <h3 class="skills-sub-title">1. Project Overview</h3>
+            <p class="project-description">
+              This project focused on the maintenance and modernization of the client's Veritas Flex Appliance infrastructure. The engagement began with critical troubleshooting of storage hardware failures to restore system redundancy. Subsequently, a comprehensive upgrade of the appliance was executed, covering both firmware and application instances, followed by post-upgrade stabilization to ensure the automation of backup schedules.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">2. Technical Scope</h3>
+            <p class="project-description">
+              <strong>Hardware Maintenance:</strong> Diagnosing and resolving disk state errors (Foreign/Failed) within the Flex Appliance storage array.
+              <br>
+              <strong>Infrastructure Upgrade:</strong> Executing a multi-layered upgrade process involving the Flex Appliance software, firmware, and hosted application instances (Primary, Media, and WORM servers).
+              <br>
+              <strong>Operational Stability:</strong> Troubleshooting policy execution failures to restore automated backup operations.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">3. My Contributions</h3>
+            <div class="phases-grid">
+              <div class="phase-card">
+                <h4>Phase 1: Storage Troubleshooting & Recovery</h4>
+                <ul>
+                  <li><strong>Failure Analysis:</strong> Identified a disk failure in the Flex Appliance storage array where a disk had entered a "foreign" state.</li>
+                  <li><strong>Restoration:</strong> Collaborated with Veritas Support to re-configure the disk, successfully restoring it to "online" active status and ensuring full storage health.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Phase 2: Flex Appliance Upgrade</h4>
+                <ul>
+                  <li><strong>Upgrade Execution:</strong> Performed a multi-step upgrade of the Flex Appliance software followed by firmware updates.</li>
+                  <li><strong>Instance Management:</strong> Managed the upgrade of application instances by stopping instances, uploading new versions, executing pre-checks, and committing upgrades for Primary and Media servers.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Phase 3: Post-Upgrade Optimization</h4>
+                <ul>
+                  <li><strong>Issue Resolution:</strong> Diagnosed a scheduling conflict where backup policies failed to run automatically post-upgrade and performed necessary configurations to restore the workflow.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">4. Technologies & Tools Used</h3>
+            <div class="tech-stack-container">
+              <span class="tech-badge">Veritas Flex Appliance</span>
+              <span class="tech-badge">Storage Array Management</span>
+              <span class="tech-badge">Firmware Upgrades</span>
+              <span class="tech-badge">Backup Policy Management</span>
+              <span class="tech-badge">Veritas Support</span>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 3rem;">Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".projectSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
