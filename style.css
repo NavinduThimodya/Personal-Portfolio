@@ -875,7 +875,7 @@ footer p {
   align-items: center;
   min-height: 85vh;
   margin: 0 5%;
-  padding-top: 4vh;
+  padding-top: 24vh;
 }
 
 .project-info-container {
@@ -936,5 +936,4 @@ footer p {
   .back-nav-mobile {
     display: block;
   }
-}
 }
