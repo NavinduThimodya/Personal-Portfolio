@@ -679,6 +679,42 @@ article .icon {
   border-color: rgba(255,255,255,0.16);
 }
 
+/* PROJECT SLIDER */
+
+.project-slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.project-slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.project-slider-track:hover {
+  animation-play-state: paused;
+}
+
+.project-card {
+  min-width: 20rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* CONTACT */
 
 #contact {
