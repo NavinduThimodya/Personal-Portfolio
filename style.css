@@ -877,11 +877,10 @@ footer p {
 #project-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 85vh;
   margin: 0 5%;
-  padding-top: 24vh;
+  padding-top: 12vh;
 }
 
 .project-info-container {
@@ -890,7 +889,7 @@ footer p {
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   width: 100%;
   max-width: 1200px;
   background: var(--surface);
@@ -942,4 +941,144 @@ footer p {
   .back-nav-mobile {
     display: block;
   }
+}
+
+/* PROJECT 1 SPECIFIC LAYOUT */
+
+.project-1-layout {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 3rem;
+  width: fit-content;
+}
+
+.project-top-section {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.project-meta-box {
+  flex: 0 1 auto;
+  min-width: 300px;
+  background: rgba(255,255,255,0.03);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.meta-value {
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.project-full-content {
+  width: 100%;
+  text-align: left;
+}
+
+.content-block {
+  margin-bottom: 3rem;
+}
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.phase-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease;
+}
+
+.phase-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.phase-card h4 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.phase-card ul {
+  list-style-position: inside;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.phase-card li {
+  margin-bottom: 0.5rem;
+}
+
+.tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.tech-badge {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+}
+
+/* SWIPER CAROUSEL (Project 1) */
+
+.projectSwiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px; /* Fixed width for crop */
+  height: 400px; /* Fixed height for crop */
+  border-radius: 1.5rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the box (crop) */
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
 }
