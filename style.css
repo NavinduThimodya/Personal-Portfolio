@@ -655,8 +655,8 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: auto;
 }
 
 .project-title {
@@ -708,9 +708,14 @@ article .icon {
 }
 
 .project-card {
-  min-width: 20rem;
+  min-width: 16rem;
+  width: fit-content;
   margin-right: 2rem;
   flex-shrink: 0;
+}
+
+.project-card .article-container {
+  justify-content: center;
 }
 
 /* CONTACT */
