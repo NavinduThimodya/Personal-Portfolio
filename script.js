@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateProgress();
   onScrollParallax();
   setupScrollspy();
+  setupProjectSlider();
 });
 
 // Scroll progress bar
@@ -144,3 +145,47 @@ window.addEventListener('load', () => {
   }
 });
 
+// Project Slider Logic (Manual Wheel + Infinite Loop)
+function setupProjectSlider() {
+  const slider = document.querySelector('.project-slider-container');
+  
+  if (!slider) return;
+
+  let isHovered = false;
+  const scrollSpeed = 1; // Auto-scroll speed
+
+  // 1. Handle Mouse Wheel -> Horizontal Scroll
+  slider.addEventListener('wheel', (e) => {
+    e.preventDefault(); // Stop page scroll
+    slider.scrollLeft += e.deltaY; // Scroll horizontally
+    checkInfiniteLoop(); // Check bounds immediately for smooth feel
+  }, { passive: false });
+
+  // 2. Pause auto-scroll on hover
+  slider.addEventListener('mouseenter', () => isHovered = true);
+  slider.addEventListener('mouseleave', () => isHovered = false);
+
+  // 3. Infinite Loop & Auto-scroll
+  function loop() {
+    if (!isHovered) {
+      slider.scrollLeft += scrollSpeed;
+    }
+    checkInfiniteLoop();
+    requestAnimationFrame(loop);
+  }
+
+  function checkInfiniteLoop() {
+    // We have 2 identical sets of projects.
+    // When we scroll past the first set (half width), reset to 0.
+    const maxScroll = slider.scrollWidth / 2;
+    
+    if (slider.scrollLeft >= maxScroll) {
+      slider.scrollLeft -= maxScroll;
+    } else if (slider.scrollLeft <= 0) {
+      slider.scrollLeft += maxScroll;
+    }
+  }
+
+  // Start the loop
+  requestAnimationFrame(loop);
+}
