@@ -46,6 +46,10 @@
   .about-containers {
     margin-top: 0;
   }
+  .swiper-slide {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -101,5 +105,9 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .swiper-slide {
+    width: 85vw;
+    height: 85vw;
   }
 }

@@ -270,6 +270,14 @@ section {
   margin-bottom: 3rem;
 }
 
+#profile .title {
+  color: var(--accent);
+}
+
+#profile .section__text__p1 {
+  color: #FFF6E0;
+}
+
 .text-accent {
   color: var(--accent);
 }
@@ -1098,9 +1106,13 @@ footer p {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 240px; /* Fixed width for crop */
-  height: 320px; /* Fixed height for crop */
+  width: 600px;
+  height: 600px;
+  max-width: 100%;
   border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   /* Logic: Default state is "Upcoming/Retiring" (Blurred & Smaller) */
   filter: blur(5px);
   opacity: 0.6;
@@ -1118,7 +1130,7 @@ footer p {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image fills the box (crop) */
+  object-fit: contain;
   border-radius: 1.5rem;
   border: 1px solid var(--border);
 }
