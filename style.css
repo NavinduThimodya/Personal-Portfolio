@@ -1098,3 +1098,68 @@ footer p {
   border-radius: 1.5rem;
   border: 1px solid var(--border);
 }
+
+/* PROJECT NAVIGATION ARROWS */
+
+.project-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.project-nav:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.project-nav img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1);
+  transition: filter 0.3s ease;
+}
+
+.project-nav:hover img {
+  filter: brightness(0) invert(0);
+}
+
+.nav-prev {
+  left: 1rem;
+}
+
+.nav-next {
+  right: 1rem;
+}
+
+.nav-prev img {
+  transform: rotate(90deg);
+}
+
+.nav-next img {
+  transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 600px) {
+  .project-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .nav-prev {
+    left: 0.5rem;
+  }
+  .nav-next {
+    right: 0.5rem;
+  }
+}
