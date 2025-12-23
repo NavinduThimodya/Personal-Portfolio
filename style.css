@@ -655,8 +655,9 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .project-title {
@@ -684,7 +685,7 @@ article .icon {
 .project-category-title {
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-slider-container + .project-category-title {
