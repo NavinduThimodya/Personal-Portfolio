@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformer Thermal Inspection | Navindu Sirimanna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      .project-image-wrapper {
+        height: 500px;
+        width: 55%;
+      }
+      .swiper-slide {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      @media screen and (max-width: 768px) {
+        .project-image-wrapper {
+          height: 350px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav" style="justify-content: flex-start; padding-left: 5%;">
+      <ul class="nav-links">
+        <li><a href="index.html#projects" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem; font-size: 1.2rem;"><span style="line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Home</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Back Button -->
+    <div class="back-nav-mobile">
+        <a href="index.html#projects" class="btn btn-color-2">Back</a>
+    </div>
+
+    <section id="project-details">
+      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">AI-Driven Transformer Thermal<br>Inspection System</h1>
+      
+      <div class="project-info-container project-1-layout">
+        
+        <!-- Top Section: Image & Metadata -->
+        <div class="project-top-section">
+          <div class="project-image-wrapper">
+            <!-- Swiper -->
+            <div class="swiper projectSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./assets/project-1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./assets/project-2.png" alt="Project Image 2" /></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="project-meta-box">
+            <h3 class="skills-sub-title" style="color: var(--text);">Project Details</h3>
+            <div class="meta-item">
+              <span class="meta-label">Role:</span>
+              <span class="meta-value">Full Stack Developer & AI Engineer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Full Width Content -->
+        <div class="project-full-content">
+          
+          <div class="content-block">
+            <h3 class="skills-sub-title">1. Project Overview</h3>
+            <p class="project-description">
+              Developed a comprehensive web-based platform designed to digitize the maintenance workflow of electrical transformers. The system replaces manual inspection processes with an automated pipeline that manages transformer records, visualizes thermal data, and utilizes Artificial Intelligence to detect temperature anomalies such as hotspots and asymmetries.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">2. Key Features & Implementation</h3>
+            <div class="phases-grid">
+              <div class="phase-card">
+                <h4>Full-Stack Architecture</h4>
+                <ul>
+                  <li><strong>Frontend & Backend:</strong> Built a responsive React frontend for interactive image analysis and a Spring Boot backend handling RESTful API requests.</li>
+                  <li><strong>Data Management:</strong> Integrated PostgreSQL to manage transformer metadata, inspection history, and user logs.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>AI-Based Anomaly Detection (Phase 2)</h4>
+                <ul>
+                  <li><strong>Detection Engine:</strong> Engineered an automated detection engine that compares "Baseline" (historical) vs. "Maintenance" (current) images side-by-side.</li>
+                  <li><strong>Algorithms:</strong> Implemented a thresholding algorithm (default 10% deviation) to flag thermal anomalies, providing severity scores and confidence levels.</li>
+                  <li><strong>Configurability:</strong> Created a configurable "Error Ruleset" allowing engineers to dynamically adjust detection sensitivity.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Human-in-the-Loop Annotation (Phase 3)</h4>
+                <ul>
+                  <li><strong>Interactive Suite:</strong> Developed an interactive annotation suite allowing engineers to resize, reposition, or delete AI-generated bounding boxes.</li>
+                  <li><strong>Feedback Loop:</strong> Implemented a feedback loop where user-modified annotations are logged to validate and retrain the model for improved future accuracy.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Digital Record Generation (Phase 4)</h4>
+                <ul>
+                  <li><strong>Automation:</strong> Automated the creation of formal Maintenance Record Forms, combining system-generated anomaly data with manual engineer inputs (status, electrical readings).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">3. Technologies & Tools Used</h3>
+            <div class="tech-stack-container">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Spring Boot</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">AI/ML</span>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 3rem;">Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".projectSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: true,
+      });
+    </script>
+
+    <!-- Project Navigation -->
+    <div class="project-nav nav-prev" onclick="location.href='./project_U_1.html'">
+      <img src="./assets/arrow.png" alt="Previous Project" />
+    </div>
+    <div class="project-nav nav-next" onclick="location.href='./project_U_3.html'">
+      <img src="./assets/arrow.png" alt="Next Project" />
+    </div>
+  </body>
+</html>

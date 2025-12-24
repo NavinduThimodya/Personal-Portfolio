@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thilinapath Deployment | Navindu Sirimanna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      .project-image-wrapper {
+        height: 500px;
+        width: 55%;
+      }
+      .swiper-slide {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      @media screen and (max-width: 768px) {
+        .project-image-wrapper {
+          height: 350px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav" style="justify-content: flex-start; padding-left: 5%;">
+      <ul class="nav-links">
+        <li><a href="index.html#projects" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem; font-size: 1.2rem;"><span style="line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Home</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Back Button -->
+    <div class="back-nav-mobile">
+        <a href="index.html#projects" class="btn btn-color-2">Back</a>
+    </div>
+
+    <section id="project-details">
+      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">“Thilinapath” Multi Campaign App<br>Deployment (On-Prem DevOps)</h1>
+      
+      <div class="project-info-container project-1-layout">
+        
+        <!-- Top Section: Image & Metadata -->
+        <div class="project-top-section">
+          <div class="project-image-wrapper">
+            <!-- Swiper -->
+            <div class="swiper projectSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./projects/Project_10/1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_10/2.png" alt="Project Image 2" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_10/3.png" alt="Project Image 3" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_10/4.webp" alt="Project Image 4" /></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="project-meta-box">
+            <h3 class="skills-sub-title" style="color: var(--text);">Project Details</h3>
+            <div class="meta-item">
+              <span class="meta-label">Client:</span>
+              <span class="meta-value">Ministry of Education, Sri Lanka</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Location:</span>
+              <span class="meta-value">On-Premises Data Center (Ministry Infrastructure)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Period:</span>
+              <span class="meta-value">June 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Full Width Content -->
+        <div class="project-full-content">
+          
+          <div class="content-block">
+            <h3 class="skills-sub-title">1. Project Overview</h3>
+            <p class="project-description">
+              This project involved the architectural design and initial deployment of “Thilinapath,” a multi-campaign application serving the Ministry of Education. The core objective was to establish a robust, on-premises DevOps environment to support the application's full lifecycle across Development (Dev), User Acceptance Testing (UAT), and Production (Prod) environments. The initiative focused on modernizing the deployment workflow using container orchestration and automated CI/CD pipelines to ensure high availability and rapid delivery.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">2. Technical Scope</h3>
+            <p class="project-description">
+              <strong>Container Orchestration:</strong> Implementation of RKE2 (Rancher Kubernetes Engine 2) for secure and compliant Kubernetes clustering, utilizing MetalLB for bare-metal load balancing.
+              <br>
+              <strong>High Availability & Data:</strong> Deployment of Redis clusters for caching and PCS clusters (Pacemaker/Corosync) for high-availability resource management, backed by NFS file servers for shared storage.
+              <br>
+              <strong>DevOps Toolchain:</strong> Establishment of a complete CI/CD ecosystem including a Private Docker Registry, Jenkins for continuous integration, and ArgoCD for GitOps-based continuous delivery.
+              <br>
+              <strong>Observability:</strong> Implementation of the ELK Stack (Elasticsearch, Logstash, Kibana) for centralized logging and monitoring.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">3. My Contributions</h3>
+            <div class="phases-grid">
+              <div class="phase-card">
+                <h4>Phase 1: Infrastructure Provisioning & Virtualization</h4>
+                <ul>
+                  <li><strong>Environment Setup:</strong> I provisioned and configured Ubuntu Virtual Machines (VMs) to serve as the host nodes for the cluster infrastructure.</li>
+                  <li><strong>Storage Configuration:</strong> I deployed NFS file servers to provide persistent, shared storage volumes required by the Kubernetes pods and application data.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Phase 2: Cluster Initialization & High Availability</h4>
+                <ul>
+                  <li><strong>Kubernetes Deployment:</strong> I set up the RKE2 clusters, ensuring a hardened and secure Kubernetes environment suitable for government deployment standards.</li>
+                  <li><strong>Load Balancing:</strong> I configured MetalLB to provide external IP addresses and load balancing services within the on-premises network.</li>
+                  <li><strong>Clustering:</strong> I deployed Redis clusters to handle application caching needs and set up PCS clusters to ensure high availability and failover capabilities for critical services.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Phase 3: DevOps Toolchain & Pipeline Configuration</h4>
+                <ul>
+                  <li><strong>CI/CD Implementation:</strong> I established the initial CI/CD pipelines using Jenkins for build automation and ArgoCD to manage deployments across Dev, UAT, and Prod environments using GitOps principles.</li>
+                  <li><strong>Artifact Management:</strong> I set up a Private Docker Registry to securely store and manage the application's container images.</li>
+                  <li><strong>Observability Setup:</strong> I deployed the ELK Stack, configuring the initial log aggregation pipelines to ensure visibility into system performance and application logs from day one.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">4. Technologies & Tools Used</h3>
+            <div class="tech-stack-container">
+              <span class="tech-badge">RKE2 Kubernetes</span>
+              <span class="tech-badge">MetalLB</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">PCS Clusters</span>
+              <span class="tech-badge">NFS</span>
+              <span class="tech-badge">Jenkins</span>
+              <span class="tech-badge">ArgoCD</span>
+              <span class="tech-badge">Docker Registry</span>
+              <span class="tech-badge">ELK Stack</span>
+              <span class="tech-badge">Ubuntu</span>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 3rem;">Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".projectSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: true,
+      });
+    </script>
+
+    <!-- Project Navigation -->
+    <div class="project-nav nav-prev" onclick="location.href='./project_9.html'">
+      <img src="./assets/arrow.png" alt="Previous Project" />
+    </div>
+    <div class="project-nav nav-next" onclick="location.href='./project_1.html'">
+      <img src="./assets/arrow.png" alt="Next Project" />
+    </div>
+  </body>
+</html>

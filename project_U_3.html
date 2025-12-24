@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Project 3 | Navindu Sirimanna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      .project-image-wrapper {
+        height: 500px;
+        width: 55%;
+      }
+      .swiper-slide {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      @media screen and (max-width: 768px) {
+        .project-image-wrapper {
+          height: 350px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav" style="justify-content: flex-start; padding-left: 5%;">
+      <ul class="nav-links">
+        <li><a href="index.html#projects" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem; font-size: 1.2rem;"><span style="line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Home</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Back Button -->
+    <div class="back-nav-mobile">
+        <a href="index.html#projects" class="btn btn-color-2">Back</a>
+    </div>
+
+    <section id="project-details">
+      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">University Project 3 Title</h1>
+      
+      <div class="project-info-container project-1-layout">
+        
+        <!-- Top Section: Image & Metadata -->
+        <div class="project-top-section">
+          <div class="project-image-wrapper">
+            <!-- Swiper -->
+            <div class="swiper projectSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./assets/project-1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./assets/project-2.png" alt="Project Image 2" /></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="project-meta-box">
+            <h3 class="skills-sub-title" style="color: var(--text);">Project Details</h3>
+            <div class="meta-item">
+              <span class="meta-label">Type:</span>
+              <span class="meta-value">University Project</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Role:</span>
+              <span class="meta-value">Role Name</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Period:</span>
+              <span class="meta-value">Year</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Full Width Content -->
+        <div class="project-full-content">
+          
+          <div class="content-block">
+            <h3 class="skills-sub-title">1. Project Overview</h3>
+            <p class="project-description">
+              Overview of the university project goes here.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">2. Technical Scope</h3>
+            <p class="project-description">
+              Technical scope description goes here.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">3. Technologies & Tools Used</h3>
+            <div class="tech-stack-container">
+              <span class="tech-badge">Tech 1</span>
+              <span class="tech-badge">Tech 2</span>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 3rem;">Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".projectSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: true,
+      });
+    </script>
+
+    <!-- Project Navigation -->
+    <div class="project-nav nav-prev" onclick="location.href='./project_U_2.html'">
+      <img src="./assets/arrow.png" alt="Previous Project" />
+    </div>
+    <div class="project-nav nav-next" onclick="location.href='./project_U_4.html'">
+      <img src="./assets/arrow.png" alt="Next Project" />
+    </div>
+  </body>
+</html>

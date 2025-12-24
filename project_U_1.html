@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RFID Asset Tracking | Navindu Sirimanna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      .project-image-wrapper {
+        height: 500px;
+        width: 55%;
+      }
+      .swiper-slide {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      @media screen and (max-width: 768px) {
+        .project-image-wrapper {
+          height: 350px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav" style="justify-content: flex-start; padding-left: 5%;">
+      <ul class="nav-links">
+        <li><a href="index.html#projects" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem; font-size: 1.2rem;"><span style="line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Home</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Back Button -->
+    <div class="back-nav-mobile">
+        <a href="index.html#projects" class="btn btn-color-2">Back</a>
+    </div>
+
+    <section id="project-details">
+      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">RFID-Based Asset Tracking System<br>for Forklifts</h1>
+      
+      <div class="project-info-container project-1-layout">
+        
+        <!-- Top Section: Image & Metadata -->
+        <div class="project-top-section">
+          <div class="project-image-wrapper">
+            <!-- Swiper -->
+            <div class="swiper projectSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./assets/project-1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./assets/project-2.png" alt="Project Image 2" /></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="project-meta-box">
+            <h3 class="skills-sub-title" style="color: var(--text);">Project Details</h3>
+            <div class="meta-item">
+              <span class="meta-label">Module:</span>
+              <span class="meta-value">EN 2160 Engineering Design Realization</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Role:</span>
+              <span class="meta-value">Individual Contributor</span>
+            </div>
+            <div class="btn-container" style="justify-content: flex-start; margin-top: 1rem; flex-wrap: wrap;">
+              <button class="btn btn-color-2" onclick="window.open('https://github.com/NavinduThimodya', '_blank')">
+                GitHub
+              </button>
+              <button class="btn btn-color-2" onclick="window.open('./assets/Final_Design_Document.pdf', '_blank')">
+                Design Doc
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Full Width Content -->
+        <div class="project-full-content">
+          
+          <div class="content-block">
+            <h3 class="skills-sub-title">1. Project Overview</h3>
+            <p class="project-description">
+              Designed and engineered a ruggedized, cost-effective RFID tracking device specifically for industrial forklift operations to address the lack of affordable logistics solutions in the local market. The device utilizes 13.56 MHz NFC technology to identify assets loaded onto forklifts and transmits tracking data to a central system via WiFi using MQTT protocols.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">2. Technical Implementation</h3>
+            <div class="phases-grid">
+              <div class="phase-card">
+                <h4>Electronics & Hardware Design</h4>
+                <ul>
+                  <li><strong>PCB Design:</strong> Developed a custom 2-layer PCB integrating an ESP32 WROOM 32 microcontroller and an NXP PN532 NFC controller.</li>
+                  <li><strong>Antenna Engineering:</strong> Designed a custom PCB antenna with a specific matching circuit and EMC filter to resonate at 13.56 MHz and match the impedance of the PN532 chip for maximum power transfer.</li>
+                  <li><strong>Power Management:</strong> Engineered a power management circuit using the LM2596S-3.3 voltage regulator to efficiently convert the forklift’s 12 V battery output to a stable 3.3 V logic level.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Firmware Development (Embedded C)</h4>
+                <ul>
+                  <li><strong>Framework Migration:</strong> Migrated firmware development from Arduino IDE to the ESP-IDF framework to utilize register-level programming for optimized hardware control and resource efficiency.</li>
+                  <li><strong>Communication Protocols:</strong> Implemented SPI communication between the ESP32 and PN532, and established a real-time data pipeline using MQTT to publish asset detection data to a cloud broker.</li>
+                  <li><strong>Critical Debugging:</strong> Identified and resolved a timing compatibility issue between the Adafruit PN532 library and the ESP32's 240 MHz clock speed by manually adjusting the communication bitrate to 100 kHz to prevent data glitches.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Mechanical Design</h4>
+                <ul>
+                  <li><strong>Rugged Enclosure:</strong> Designed a rugged enclosure using SolidWorks, featuring upper housing and lower chassis components tailored for forklift mounting and 3D printed for prototyping.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <h3 class="skills-sub-title">3. Technologies & Tools Used</h3>
+            <div class="tech-stack-container">
+              <span class="tech-badge">ESP32</span>
+              <span class="tech-badge">NXP PN532</span>
+              <span class="tech-badge">Altium/EDA Tools</span>
+              <span class="tech-badge">ESP-IDF</span>
+              <span class="tech-badge">MQTT</span>
+              <span class="tech-badge">SolidWorks</span>
+              <span class="tech-badge">SPI Communication</span>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 3rem;">Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".projectSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        speed: 600,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        loop: true,
+      });
+    </script>
+
+    <!-- Project Navigation -->
+    <div class="project-nav nav-prev" onclick="location.href='./project_U_4.html'">
+      <img src="./assets/arrow.png" alt="Previous Project" />
+    </div>
+    <div class="project-nav nav-next" onclick="location.href='./project_U_2.html'">
+      <img src="./assets/arrow.png" alt="Next Project" />
+    </div>
+  </body>
+</html>
