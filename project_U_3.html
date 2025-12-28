@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>University Project 3 | Navindu Sirimanna</title>
+    <title>Neuro-Steered Speaker Extraction | Navindu Sirimanna</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -35,17 +35,17 @@
   <body>
     <nav id="desktop-nav" style="justify-content: flex-start; padding-left: 5%;">
       <ul class="nav-links">
-        <li><a href="index.html#projects" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem; font-size: 0.9rem;"><span style="line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Home</a></li>
+        <li><a href="projects.html" class="btn btn-color-2" style="width: auto; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.5rem 1.5rem; font-size: 0.9rem;"><span style="line-height: 0; padding-bottom: 5px;">&#8592;</span> Back to Projects</a></li>
       </ul>
     </nav>
     
     <!-- Mobile Back Button -->
     <div class="back-nav-mobile">
-        <a href="index.html#projects" class="btn btn-color-2">Back</a>
+        <a href="projects.html" class="btn btn-color-2">Back</a>
     </div>
 
     <section id="project-details">
-      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">University Project 3 Title</h1>
+      <h1 class="title" style="margin-bottom: 2rem; font-size: 2.5rem;">Neuro-Steered Speaker Extraction:<br>Fusion of Speech and EEG Signals</h1>
       
       <div class="project-info-container project-1-layout">
         
@@ -55,8 +55,14 @@
             <!-- Swiper -->
             <div class="swiper projectSwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./assets/project-1.png" alt="Project Image 1" /></div>
-                <div class="swiper-slide"><img src="./assets/project-2.png" alt="Project Image 2" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/1.png" alt="Project Image 1" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/3.PNG" alt="Project Image 3" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/4.png" alt="Project Image 4" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/5.png" alt="Project Image 5" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/6.png" alt="Project Image 6" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/7.png" alt="Project Image 7" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/8.png" alt="Project Image 8" /></div>
+                <div class="swiper-slide"><img src="./projects/Project_U_3/9.jpg" alt="Project Image 9" /></div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -65,15 +71,11 @@
             <h3 class="skills-sub-title" style="color: var(--text);">Project Details</h3>
             <div class="meta-item">
               <span class="meta-label">Type:</span>
-              <span class="meta-value">University Project</span>
+              <span class="meta-value">Undergraduate Research Project</span>
             </div>
             <div class="meta-item">
-              <span class="meta-label">Role:</span>
-              <span class="meta-value">Role Name</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Period:</span>
-              <span class="meta-value">Year</span>
+              <span class="meta-label">Status:</span>
+              <span class="meta-value">Mid-Evaluation Complete (Ongoing)</span>
             </div>
           </div>
         </div>
@@ -84,22 +86,54 @@
           <div class="content-block">
             <h3 class="skills-sub-title">1. Project Overview</h3>
             <p class="project-description">
-              Overview of the university project goes here.
+              Designed and implemented a deep learning framework to solve the "Cocktail Party Problem" for assistive hearing technology. The system utilizes Electroencephalography (EEG) signals to track a user's auditory attention and isolate a specific target speaker from a noisy, multi-speaker environment. The project introduces a novel Hierarchical Fusion Strategy that aligns brain signals with speech at multiple temporal scales, surpassing traditional static vector approaches.
             </p>
           </div>
 
           <div class="content-block">
-            <h3 class="skills-sub-title">2. Technical Scope</h3>
-            <p class="project-description">
-              Technical scope description goes here.
-            </p>
+            <h3 class="skills-sub-title">2. Technical Implementation</h3>
+            <div class="phases-grid">
+              <div class="phase-card">
+                <h4>Hierarchical Fusion Architecture</h4>
+                <ul>
+                  <li><strong>Fusion Module:</strong> Developed a fusion module that aligns EEG features with specific layers of a frozen Wav2Vec 2.0 model: Layer 1 for Acoustic features, Layer 4 for Linguistic features, and the Final Layer for Semantic context.</li>
+                  <li><strong>Cross-Modal Attention:</strong> Implemented Cross-Modal Attention mechanisms to weigh the relevance of speech features based on neural attention.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Dual-Path Pipeline</h4>
+                <ul>
+                  <li><strong>Discriminative Path:</strong> Built a real-time extraction pipeline using a mask-estimation approach, optimized for low latency.</li>
+                  <li><strong>Generative Path:</strong> Adapted the "SoloSpeech" diffusion model to create an EEG-conditioned generative pipeline for high-fidelity waveform reconstruction.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Signal Processing & Optimization</h4>
+                <ul>
+                  <li><strong>Multi-scale EEG Encoder:</strong> Engineered using Temporal Convolutional Networks (TCN) with exponentially expanding receptive fields to capture both fast transient and slow cortical rhythms.</li>
+                  <li><strong>Efficiency:</strong> Addressed high-dimensionality EEG data by utilizing Depthwise-Separable 1D Convolutions to improve parameter efficiency.</li>
+                  <li><strong>Performance:</strong> Reduced training time from 2 hours to 15 minutes per epoch by implementing advanced data handling (LMDB caching) on NVIDIA A100 cloud GPUs.</li>
+                </ul>
+              </div>
+              <div class="phase-card">
+                <h4>Results</h4>
+                <ul>
+                  <li><strong>Metrics:</strong> Achieved a Scale-Invariant Signal-to-Distortion Ratio (SI-SDR) of 11.374 dB, marking a ~5.6 dB improvement over the baseline and performing competitively with State-of-the-Art models like NeuroHeed.</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="content-block">
             <h3 class="skills-sub-title">3. Technologies & Tools Used</h3>
             <div class="tech-stack-container">
-              <span class="tech-badge">Tech 1</span>
-              <span class="tech-badge">Tech 2</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">Wav2Vec 2.0</span>
+              <span class="tech-badge">EEG Signal Processing</span>
+              <span class="tech-badge">Diffusion Models</span>
+              <span class="tech-badge">NVIDIA A100</span>
+              <span class="tech-badge">TCN</span>
             </div>
           </div>
           <p style="text-align: center; margin-top: 3rem;">Copyright &#169; 2025 Navindu Sirimanna. All Rights Reserved.</p>
