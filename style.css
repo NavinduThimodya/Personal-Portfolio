@@ -773,6 +773,19 @@ article .icon {
   flex-shrink: 1;
 }
 
+.nav-button-highlight {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--muted);
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav-button-highlight:hover {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  box-shadow: 0 0 15px rgba(255, 209, 102, 0.3);
+}
+
 /* CONTACT */
 
 #contact {
