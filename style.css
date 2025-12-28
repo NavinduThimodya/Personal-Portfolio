@@ -662,6 +662,10 @@ article .icon {
   margin-bottom: 5rem; /* Independent section spacing */
 }
 
+#projects .title {
+  margin-top: 3rem;
+}
+
 .color-container {
   border-color: var(--border);
   background: var(--surface);
@@ -780,9 +784,11 @@ article .icon {
   font-weight: 600;
 }
 
-.nav-button-highlight:hover {
+.nav-button-highlight:hover,
+.nav-button-highlight.active {
   background-color: var(--accent);
   color: var(--accent-contrast);
+  border-color: var(--accent);
   box-shadow: 0 0 15px rgba(255, 209, 102, 0.3);
 }
 
