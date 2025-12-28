@@ -58,7 +58,7 @@ a,
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
 }
 
@@ -111,7 +111,7 @@ a:hover {
 
 #desktop-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -155,7 +155,7 @@ a:hover {
   display: block;
   padding: 10px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--text);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
@@ -249,17 +249,18 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  font-size: 0.9rem;
 }
 
 .section__text__p2 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 800;
   color: var(--muted); /* Frontend Developer: keep the previous muted shade */
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: 800;
   color: #ffffff; /* John Doe: force white everywhere */
@@ -403,6 +404,7 @@ img.social-icon {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  font-size: 0.9rem;
 }
 
 .btn-color-1 {
@@ -540,7 +542,7 @@ img.social-icon {
 .skills-sub-title {
   color: var(--accent);
   font-weight: 800;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
 }
 
@@ -821,7 +823,7 @@ article .icon {
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: 1rem;
 }
 
 .contact-icon {
@@ -847,6 +849,7 @@ footer {
 
 footer p {
   text-align: center;
+  font-size: 0.9rem;
 }
 
 /* ENHANCEMENTS: animations, progress bar, micro-interactions, parallax */
@@ -960,6 +963,23 @@ footer p {
   min-height: 85vh;
   margin: 0 5%;
   padding-top: 12vh;
+}
+
+/* Restore font sizes for Project Details pages */
+#project-details .title {
+  font-size: 3rem;
+}
+
+#project-details .skills-sub-title {
+  font-size: 1.75rem;
+}
+
+#project-details .btn {
+  font-size: 1rem;
+}
+
+#project-details p:not(.project-description) {
+  font-size: 1rem;
 }
 
 .project-info-container {
