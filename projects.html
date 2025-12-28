@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Navindu Sirimanna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <nav id="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html#about" class="nav-button">About</a></li>
+        <li><a href="index.html#skills" class="nav-button">Skills</a></li>
+        <li><a href="#" class="nav-button active">Projects</a></li>
+        <li><a href="index.html#contact" class="nav-button">Contact</a></li>
+      </ul>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo"></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html#about" onclick="toggleMenu()" class="nav-button">About</a></li>
+          <li><a href="index.html#skills" onclick="toggleMenu()" class="nav-button">Skills</a></li>
+          <li><a href="#" onclick="toggleMenu()" class="nav-button active">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()" class="nav-button">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="projects">
+      <p class="section__text__p1" data-aos="fade-right" data-aos-once="false">Browse My Recent</p>
+      <h1 class="title" data-aos="fade-left" data-aos-once="false">Projects</h1>
+      
+      <h2 class="skills-sub-title project-category-title" data-aos="fade-up" data-aos-once="false">Internship Projects</h2>
+      <div class="project-grid-container" data-aos="fade-up" data-aos-once="true">
+        <div class="project-grid">
+          <!-- 6 Projects -->
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_1.jpg"
+                alt="Project 1"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">ODA Deployment</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">BOC</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_1.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_2.png"
+                alt="Project 2"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Nutanix Private Cloud</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">Registrar General Department</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_2.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_3.webp"
+                alt="Project 3"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">NetBackup Migration</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">CDB</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_3.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_4.jpg"
+                alt="Project 4"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Banking System Migration</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">HNB</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_4.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_5.jpg"
+                alt="Project 5"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Exadata Migration</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">Amana Bank</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_5.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_6.jpg"
+                alt="Project 6"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Flex Appliance Issue</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">INSEE Cement</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_6.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_7.jpg"
+                alt="Project 7"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Commvault Backup</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">NDB</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='./project_7.html'">
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_8.jpg"
+                alt="Project 8"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Infrastructure Expansion</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">Dialog Axiata</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='./project_8.html'">
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_9.jpg"
+                alt="Project 9"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Hardware Maintenance</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">SLT</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='./project_9.html'">
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project_10.png"
+                alt="Project 10"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Thilinapath Project</h2>
+            <p style="font-size: 0.9rem; margin-top: -0.8rem; margin-bottom: 1rem;">Ministry of Education</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='./project_10.html'">
+                Explore
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="skills-sub-title project-category-title" data-aos="fade-up" data-aos-once="false">University Projects</h2>
+      <div class="project-grid-container" data-aos="fade-up" data-aos-once="true">
+        <div class="project-grid">
+          <!-- 6 Projects -->
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">RFID Asset Tracking</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_U_1.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Transformer Thermal Inspection</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_U_2.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_U_3.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container project-card">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 4"
+                class="project-img"
+                data-speed="0.02"
+              />
+            </div>
+            <h2 class="skills-sub-title project-title">Project Four</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./project_U_4.html'"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='index.html#contact'"
+      />
+    </section>
+    <footer>
+      <p>Copyright &#169; 2025  Navindu Sirimanna.  All Rights Reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

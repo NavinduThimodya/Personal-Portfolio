@@ -750,6 +750,29 @@ article .icon {
   justify-content: center;
 }
 
+/* PROJECT GRID (Replaces Slider) */
+.project-grid-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Adjust card for grid */
+.project-grid .project-card {
+  margin-right: 0;
+  flex-shrink: 1;
+}
+
 /* CONTACT */
 
 #contact {
